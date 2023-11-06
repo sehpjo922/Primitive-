@@ -1,0 +1,17 @@
+public class DoubleIteratorExample {
+    public static void main(String[] args) {
+        double[] values = { 1.2, 3.4, 5.6, 7.8 };
+        
+        // Create a DoubleStream from the array of double values
+        DoubleStream stream = DoubleStream.of(values);
+        
+        // Get the primitive iterator for double values
+        PrimitiveIterator.OfDouble iterator = stream.iterator();
+        
+        // Iterate over the double values
+        while (iterator.hasNext()) {
+            double value = iterator.next();
+            System.out.println(value);
+        }
+    }
+}
